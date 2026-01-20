@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     siteName: "justify.dev",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "justify.dev - Professional Excuses for Developers",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "justify.dev - Professional Excuses for Developers",
     description: "Generate professional, funny, and believable excuses for missed deadlines, bugs, and delays.",
-    images: ["/og-image.png"],
+    images: ["/og-image.webp"],
     creator: "@yayadeveloppeur",
   },
   metadataBase: new URL(domain),
