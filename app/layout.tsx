@@ -1,6 +1,9 @@
+import { Analytics, AnalyticsProps } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
+
 
 import "./globals.css";
 
@@ -95,6 +98,8 @@ export default function RootLayout({
       >
         <NuqsAdapter>
           {children}
+          <Analytics mode={process.env.NODE_ENV as AnalyticsProps["mode"]} />
+          <SpeedInsights debug={process.env.NODE_ENV === 'development'} />
         </NuqsAdapter>
       </body>
     </html>
