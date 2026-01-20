@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# justify.dev 🎲
 
-## Getting Started
+> Professional excuses for developers. Built for fun, powered by chaos.
 
-First, run the development server:
+A playful web app that generates believable (and hilarious) excuses for common developer situations like missed deadlines, production bugs, delayed replies, and postponed features.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![justify-dev.vercel.app](./public/og-image.png)
+
+## 🎨 How It Works
+
+The app uses a **Human-Readable ID (HRID)** style algorithm to generate excuses dynamically:
+
+1. **Word Banks**: Curated lists of adjectives, nouns, verbs, corporate jargon, and technical terms
+2. **Template System**: Category and tone-specific templates with placeholders
+3. **Random Combination**: Fills templates with random words from appropriate banks
+4. **Unique Output**: Creates thousands of possible excuse combinations
+
+## 🛠️ Customization
+
+### Adding New Excuses
+
+Edit `lib/data/excuse-parts.ts` to add more words to the banks:
+
+```typescript
+export const adjectives = [
+  'critical', 'legacy', 'distributed',
+  // Add your words here
+];
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Adding New Templates
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edit `lib/utils/excuse-generator.ts` to add new excuse templates:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```typescript
+corporate: [
+  `We're ${random(verbs)} ${random(adjectives)} ${random(nouns)}...`,
+  // Add your template here
+],
+```
 
-## Learn More
+## 🎯 Use Cases
 
-To learn more about Next.js, take a look at the following resources:
+- **Standup meetings** when you're behind schedule
+- **Slack messages** to your PM
+- **Email replies** for delayed work
+- **Creative writing practice** for corporate speak
+- **Entertainment** (the primary use case)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚠️ Disclaimer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This is a satirical tool built for entertainment purposes. While the excuses are professionally worded, we recommend:
 
-## Deploy on Vercel
+- Using them sparingly (if at all)
+- Being honest with your team
+- Actually fixing the bugs
+- Meeting your deadlines when possible
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Built for fun. Not responsible for consequences.** 😈
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
