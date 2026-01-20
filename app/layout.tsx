@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const domain = 'https://justify.dev.vercel.app';
+const domain = 'https://justify-dev.vercel.app';
 
 export const metadata: Metadata = {
   title: "justify.dev - Professional Excuses for Developers",
