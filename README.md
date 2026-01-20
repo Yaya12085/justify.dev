@@ -4,7 +4,7 @@
 
 A playful web app that generates believable (and hilarious) excuses for common developer situations like missed deadlines, production bugs, delayed replies, and postponed features.
 
-![justify-dev.vercel.app](./public/og-image.png)
+![justify-dev.vercel.app](./public/og-image.webp)
 
 ## 🎨 How It Works
 
